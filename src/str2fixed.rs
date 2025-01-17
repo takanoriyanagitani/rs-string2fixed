@@ -54,10 +54,10 @@ where
     let br = BufReader::new(r);
     let lines = br.split(split);
     let writer = |v: Vec<u8>| {
-		w.write_all(&v)?;
-		writeln!(&mut w)?;
-		Ok(())
-	};
+        w.write_all(&v)?;
+        writeln!(&mut w)?;
+        Ok(())
+    };
     bytes2fixed(lines, conv, writer)
 }
 
