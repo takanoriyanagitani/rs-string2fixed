@@ -1,0 +1,11 @@
+[package]
+name = "rs-string2fixed"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release-wasi]
+inherits = "release"
+lto = true
+strip = true
+opt-level = 's'
+codegen-units = 16
